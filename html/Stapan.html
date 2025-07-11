@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Dashboard Stapan</title>
+</head>
+
+<body>
+    <header>
+        <h1>Dashboard Stapan</h1>
+        <nav>
+            <ul>
+                <li><a href="#animale">Animale</a></li>
+                <li><a href="#consultatii">Consultatii</a></li>
+                <li><a href="#vaccinari">Vaccinari</a></li>
+                <li><a href="#cont">Cont</a></li>
+                <li><button id="logout">Logout</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Bun venit!</h2>
+        <p>Aici puteti vedea informatii legate de animalele dumneavoastra, consultatii si vaccinari.</p>
+
+        <section id="animale">
+            <h3>Animale</h3>
+            <div class="table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nume</th>
+                            <th>Specie</th>
+                            <th>Rasa</th>
+                            <th>Data Nasterii</th>
+                            <th>Sex</th>
+                            <th>Greutate</th>
+                        </tr>
+                    </thead>
+                    <tbody id="animaleTable"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="consultatii">
+            <h3>Consultatii</h3>
+            <div class="table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nume Animal</th>
+                            <th>Data Consultatiei</th>
+                            <th>Diagnostic</th>
+                            <th>Observatii</th>
+                            <th>Medic</th>
+                        </tr>
+                    </thead>
+                    <tbody id="consultatiiTable"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="vaccinari">
+            <h3>Vaccinari</h3>
+            <div class="table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nume Animal</th>
+                            <th>Nume Vaccin</th>
+                            <th>Tip Administrare</th>
+                            <th>Doza</th>
+                            <th>Data Vaccinarii</th>
+                        </tr>
+                    </thead>
+                    <tbody id="vaccinariTable"></tbody>
+                </table>
+            </div>
+            <form id="deleteVaccinareForm">
+                <input type="text" id="numeAnimal" placeholder="Nume Animal" required>
+                <input type="text" id="numeVaccin" placeholder="Nume Vaccin" required>
+                <button type="submit">Delete</button>
+            </form>
+            <span id="responseMessage1"></span>
+        </section>
+
+        <section id="cont">
+            <h3>Cont</h3>
+            <div class="table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nume</th>
+                            <th>Prenume</th>
+                            <th>Telefon</th>
+                            <th>Email</th>
+                            <th>Adresa</th>
+                        </tr>
+                    </thead>
+                    <tbody id="contTable"></tbody>
+                </table>
+            </div>
+            <form id="updateContForm">
+                <label for="numeColoana">Nume Coloana:</label>
+                <select id="numeColoana" required>
+                    <option value="Nume">Nume</option>
+                    <option value="Prenume">Prenume</option>
+                    <option value="Telefon">Telefon</option>
+                    <option value="Email">Email</option>
+                    <option value="Adresa">Adresa</option>
+                </select>
+                <input type="text" id="nouaValoare" placeholder="Noua valoare" required>
+                <button type="submit">Update</button>
+            </form>
+            <span id="responseMessage2"></span>
+        </section>
+    </main>
+    <footer>
+        <p>Martin Mihnea Matei ©2024</p>
+    </footer>
+    <script src="../js/stapan.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Dashboard Medic</title>
+</head>
+
+<body>
+    <header>
+        <h1>Dashboard Medic</h1>
+        <nav>
+            <ul>
+                <li><a href="#stapaniAnimale">Stapani-Animale</a></li>
+                <li><a href="#consultatii">Consultatii</a></li>
+                <li><a href="#vaccinari">Vaccinari</a></li>
+                <li><a href="#tratamenteMedicamente">Tratamente-Medicamente</a></li>
+                <li><button id="logout">Logout</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Bun venit!</h2>
+        <p>Aici puteti gestiona informatii legate de stapani si animalele lor, consultatii, vaccinari, tratamente si medicamentele asociate.</p>
+
+        <section id="stapaniAnimale">
+            <h3>Stapani-Animale</h3>
+            <label for="numarAnimale">Stapani cu un numar de animale cel putin egal cu:</label>
+            <input type="number" id="numarAnimale" placeholder="Numar Animale">
+            <button id="stapaniAnimaleFilter">Filter</button>
+            <div class="table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nume Stapan</th>
+                            <th>Prenume Stapan</th>
+                            <th>Telefon</th>
+                            <th>Email</th>
+                            <th>Nume Animal</th>
+                            <th>Specie</th>
+                            <th>Rasa</th>
+                        </tr>
+                    </thead>
+                    <tbody id="stapaniAnimaleTable"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="consultatii">
+            <h3>Consultatii</h3>
+            <div class="table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nume Animal</th>
+                            <th>Data Consultatiei</th>
+                            <th>Diagnostic</th>
+                            <th>Observatii</th>
+                        </tr>
+                    </thead>
+                    <tbody id="consultatiiTable"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="vaccinari">
+            <h3>Vaccinari</h3>
+            <label for="numeStapan">Vaccinari pentru animalele al caror stapan este:</label>
+            <input type="text" id="numeStapan" placeholder="Nume Stapan">
+            <button id="vaccinariFilter">Filter</button>
+            <div class="table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nume Animal</th>
+                            <th>Nume Vaccin</th>
+                            <th>Tip Administrare</th>
+                            <th>Doza</th>
+                            <th>Data Vaccinarii</th>
+                        </tr>
+                    </thead>
+                    <tbody id="vaccinariTable"></tbody>
+                </table>
+            </div>
+            <form id="updateVaccinareForm">
+                <input type="text" id="numeAnimal" placeholder="Nume Animal" required>
+                <input type="text" id="numeVaccinVechi" placeholder="Nume Vaccin Vechi" required>
+                <input type="text" id="numeVaccinNou" placeholder="Nume Vaccin Nou" required>
+                <button type="submit">Update</button>
+            </form>
+            <span id="responseMessage1"></span>
+        </section>
+
+        <section id="tratamenteMedicamente">
+            <h3>Tratamente-Medicamente</h3>
+            <div class="table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tratament ID</th>
+                            <th>Nume Animal</th>
+                            <th>Tip Tratament</th>
+                            <th>Durata</th>
+                            <th>Stare</th>
+                            <th>Nume Medicament</th>
+                            <th>Descriere</th>
+                            <th>Contraindicatii</th>
+                            <th>Doza</th>
+                            <th>Forma</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tratamenteMedicamenteTable"></tbody>
+                </table>
+            </div>
+            <form id="deleteMedicamentForm">
+                <input type="text" id="tratamentID" placeholder="Tratament ID" required>
+                <input type="text" id="numeMedicament" placeholder="Nume Medicament" required>
+                <button type="submit">Delete</button>
+            </form>
+            <span id="responseMessage2"></span>
+        </section>
+    </main>
+    <footer>
+        <p>Martin Mihnea Matei ©2024</p>
+    </footer>
+    <script src="../js/medic.js"></script>
+</body>
+
+</html>

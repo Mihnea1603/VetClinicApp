@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Register</title>
+</head>
+
+<body>
+    <header>
+        <h1>Cabinet Veterinar</h1>
+    </header>
+    <main>
+        <h2>Create a new account</h2>
+        <form id="registerForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+            <label for="role">Select role:</label>
+            <select id="role" required>
+                <option value="Stapan">Stapan</option>
+                <option value="Medic">Medic</option>
+            </select>
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a class="blue" href="Login.html">Login here</a></p>
+        <span id="responseMessage"></span>
+    </main>
+    <footer>
+        <p>Martin Mihnea Matei ©2024</p>
+    </footer>
+    <script src="../js/register.js"></script>
+</body>
+
+</html>
